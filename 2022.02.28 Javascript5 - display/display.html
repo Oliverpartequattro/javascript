@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <button onclick="showOne()">Egy</button>
+    <button onclick="showTwo()">Kettő</button>
+    
+    <p id="one" class="d-block">
+        1 - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores iure fugit amet magni sunt cumque rerum mollitia voluptatibus totam qui. At eligendi vitae hic fugit distinctio omnis, dignissimos recusandae obcaecati.
+    </p>
+    <p id="two" class="d-none">
+        2 - Nesciunt ipsum exercitationem ea excepturi dolores architecto? Et mollitia eligendi deserunt iste perferendis exercitationem, ad libero necessitatibus. Voluptatibus maiores earum quis voluptas aperiam distinctio, perferendis, ab reiciendis, nisi quidem optio?
+    </p>
+
+    <script>
+        function showOne() {
+            document.querySelector('#one').classList.remove('d-none');
+            document.querySelector('#one').classList.add('d-block');
+            document.querySelector('#two').classList.remove('d-block');
+            document.querySelector('#two').classList.add('d-none');
+        }
+
+        function showTwo() {
+            document.getElementById('two').classList.remove('d-none');
+            document.getElementById('two').classList.add('d-block');
+            document.querySelector('#one').classList.remove('d-block');
+            document.querySelector('#one').classList.add('d-none');
+        }
+    </script>
+
+</body>
+</html>
